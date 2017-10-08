@@ -15,7 +15,6 @@ var files = [
 ];  
 
 var styles = [
-  'node_modules/angular-toastr/dist/angular-toastr.min.css',
   'node_modules/angular-material/angular-material.min.css'
 ];
 
