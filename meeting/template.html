@@ -3,14 +3,7 @@
   
   <form class="form">
     <md-input-container>
-      <md-datepicker 
-        ng-model="$ctrl.date" 
-        md-placeholder="Data" 
-        md-open-on-focus 
-        md-date-filter="$ctrl.onlyWeekdays" 
-        md-min-date="$ctrl.currentDay" 
-        md-max-date="$ctrl.maxDate" 
-        ng-change="$ctrl.getData()">
+      <md-datepicker ng-model="$ctrl.date" md-placeholder="Data" md-open-on-focus md-date-filter="$ctrl.onlyWeekdays" md-min-date="$ctrl.currentDay" md-max-date="$ctrl.maxDate" ng-change="$ctrl.getData()">
       </md-datepicker>
     </md-input-container>
     <md-input-container>
@@ -25,7 +18,7 @@
 
   <div ng-if="$ctrl.hours">
     <h2 class="card__subtitle">Horário da reunião</h2>
-    <div class="list" >
+    <div class="list">
       <div class="list__item">  
         <p>
           {{ $ctrl.hometown }} - 
@@ -43,4 +36,4 @@
 
   <p class="message" ng-if="$ctrl.hours === false">
     Não é possível marcar a reunião pois o timezone não permite devido ao horário comercial :(
-  </p>
+  </p></div>

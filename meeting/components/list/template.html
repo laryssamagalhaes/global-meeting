@@ -1,0 +1,11 @@
+<div ng-if="$ctrl.hours">
+  <h2 class="card__subtitle">Horário da reunião</h2>
+  <div class="list">
+    <div class="list__item">  
+      <p>{{ $ctrl.hometown }} - <span>{{ $ctrl.date | date: 'dd/MM/y' }} <b>{{ $ctrl.hours.hometown }}</b></span></p>
+    </div>
+    <div class="list__item">
+      <p>{{ $ctrl.destination }} - <span>{{ $ctrl.date | date: 'dd/MM/y' }} <b>{{ $ctrl.hours.destination }}</b></span></p>
+    </div>
+  </div>
+<div></div></div>
