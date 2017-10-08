@@ -25,7 +25,6 @@
     "gulp-css-globbing": "~0.2.2",
     "gulp-expect-file": "0.0.7",
     "gulp-if": "^2.0.2",
-    "gulp-imagemin": "^3.4.0",
     "gulp-jshint": "^2.0.4",
     "gulp-merge-media-queries": "^0.2.1",
     "gulp-cssnano": "*",
@@ -48,7 +47,6 @@
     "angular": "1.6.6",
     "angular-route": "~1.6.6",
     "angular-sanitize": "~1.6.6",
-    "angular-toastr": "~2.1.1",
     "jshint": "^2.9.5"
   },
   "dependencies": {

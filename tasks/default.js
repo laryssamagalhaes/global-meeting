@@ -9,7 +9,6 @@ gulp.task('default', function () {
 gulp.task('build', [
   'env',
   'html',
-  'copyimage',
   'css',
   'js',
   'build-vendors'
@@ -24,6 +23,5 @@ gulp.task('dev', [
 
 //task for prepare deploy
 gulp.task('production', [
-  'build',
-  'imagemin'
+  'build'
 ]);

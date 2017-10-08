@@ -7,10 +7,7 @@ var minifyCSS = require('gulp-cssnano');
 
 var files = [
   'node_modules/angular/angular.min.js',
-  'node_modules/angular/angular.min.js.map',
   'node_modules/angular-sanitize/angular-sanitize.min.js',
-  'node_modules/angular-sanitize/angular-sanitize.min.js.map',
-  'node_modules/angular-toastr/dist/angular-toastr.tpls.min.js',
   'node_modules/angular-aria/angular-aria.js',
   'node_modules/angular-animate/angular-animate.js',
   'node_modules/angular-material/angular-material.min.js',
@@ -22,11 +19,7 @@ var styles = [
   'node_modules/angular-material/angular-material.min.css'
 ];
 
-var EXTERNAL_FONTS = [
-  //your external fonts
-];
-
-gulp.task('build-vendors', ['build-vendors-css', 'build-vendors-fonts'], function () {
+gulp.task('build-vendors', ['build-vendors-css'], function () {
   gulp.src(files)
     .pipe(expect({ errorOnFailure: true }, files))
     .pipe(gulpif(/[.]js$/, concat('vendors.js')))
@@ -46,14 +39,6 @@ gulp.task('build-vendors-css', function(){
     }))
     .pipe(gulp.dest('./build/assets/css/'));
 });
-
-
-gulp.task('build-vendors-fonts', function(){
-  gulp.src(EXTERNAL_FONTS)
-    .pipe(expect({ errorOnFailure: true }, EXTERNAL_FONTS))
-    .pipe(gulp.dest('./build/assets/fonts/'));
-});
-
 
 
 

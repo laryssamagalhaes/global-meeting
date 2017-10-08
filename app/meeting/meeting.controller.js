@@ -47,7 +47,7 @@
         getPlace(hometown, 0, 'hometown');
         getPlace(destination, 1, 'destination');
       }
-    }
+    };
 
     var hometown = meetingFactory.initAutoComplete('hometown');
 

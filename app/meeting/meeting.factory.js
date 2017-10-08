@@ -51,13 +51,13 @@
   			  return {
   				  hometown: getAmPm(9),
   				  destination: getAmPm(9 + diffHour)
-  			  }
-			  } 
+  			  };
+			  }
 
 				return {
     			destination: getAmPm(9),
     			hometown: getAmPm(9 + diffHour)
-    		}
+    		};
       }
 
       function getHours(seconds) {

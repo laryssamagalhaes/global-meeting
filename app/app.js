@@ -4,7 +4,6 @@
   angular
     .module('app', ['env',
                     'ngSanitize',
-                    'toastr',
                     'ngMaterial'])
 
     .config(function($mdThemingProvider) {
