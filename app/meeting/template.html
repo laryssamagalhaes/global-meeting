@@ -1,0 +1,46 @@
+<div class="card">
+  <h1 class="card__title">Marcador de reunião internacional</h1>
+  
+  <form class="form">
+    <md-input-container>
+      <md-datepicker 
+        ng-model="$ctrl.date" 
+        md-placeholder="Data" 
+        md-open-on-focus 
+        md-date-filter="$ctrl.onlyWeekdays" 
+        md-min-date="$ctrl.currentDay" 
+        md-max-date="$ctrl.maxDate" 
+        ng-change="$ctrl.getData()">
+      </md-datepicker>
+    </md-input-container>
+    <md-input-container>
+      <label>Sua cidade</label>
+      <input id="hometown" ng-model="$ctrl.hometown" placeholder>
+    </md-input-container>
+    <md-input-container>
+      <label>Cidade da outra pessoa</label>
+      <input id="destination" ng-model="$ctrl.destination" placeholder>
+    </md-input-container>
+  </form>
+
+  <div ng-if="$ctrl.hours">
+    <h2 class="card__subtitle">Horário da reunião</h2>
+    <div class="list" >
+      <div class="list__item">  
+        <p>
+          {{ $ctrl.hometown }} - 
+          <span>{{ $ctrl.date | date: 'dd/MM/y' }} <b>{{ $ctrl.hours.hometown }}</b></span>
+        </p>
+      </div>
+      <div class="list__item">
+        <p>
+          {{ $ctrl.destination }} - 
+          <span>{{ $ctrl.date | date: 'dd/MM/y' }} <b>{{ $ctrl.hours.destination }}</b></span>
+        </p>
+      </div>
+    </div>
+  </div>  
+
+  <p class="message" ng-if="$ctrl.hours === false">
+    Não é possível marcar a reunião pois o timezone não permite devido ao horário comercial :(
+  </p>

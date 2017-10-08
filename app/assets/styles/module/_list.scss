@@ -1,0 +1,11 @@
+.list {
+	border: 1px solid $blue;
+
+    &__item {
+    	padding: .5em;
+    }
+
+    &__item:first-child{
+    	border-bottom: 1px solid $gray;
+    }
+}

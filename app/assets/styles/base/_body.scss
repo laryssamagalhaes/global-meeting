@@ -1,0 +1,9 @@
+body {
+	display: flex;
+	align-items: center;
+
+  @media(max-width: $xs) {
+   display: block;
+   margin-top: 20px;
+  }
+}

@@ -1,0 +1,9 @@
+.form {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 20px;
+
+  @media(max-width: $xs) {
+    flex-direction: column;
+  }
+}
